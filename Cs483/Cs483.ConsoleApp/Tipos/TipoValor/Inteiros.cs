@@ -10,10 +10,16 @@ namespace Cs483.ConsoleApp.Tipos.TipoValor
     {
         public void Executar()
         {
+
+
+
+
+
+
             byte idade = 25;
             byte numeroS = 222;
             long numeroGrande = 1_000_000;
-            
+
 
 
             Console.WriteLine($"{idade} - Idade");
@@ -49,7 +55,7 @@ namespace Cs483.ConsoleApp.Tipos.TipoValor
             Console.WriteLine($"A Letra '{letra}' em inteiro é: {(int)letra}");
             Console.WriteLine("----------------");
 
-            
+
 
 
         }
