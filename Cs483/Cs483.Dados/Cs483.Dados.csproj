@@ -5,19 +5,33 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A417E470-3AB6-4F28-B106-E8BD1CD1BE0D}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Cs483.ConsoleApp</RootNamespace>
-    <AssemblyName>Cs483.ConsoleApp</AssemblyName>
+    <ProjectGuid>{AB7F8039-5F87-44A8-9BF8-070C04ED4667}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs483.Dados</RootNamespace>
+    <AssemblyName>Cs483.Dados</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,7 +41,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -53,29 +66,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Base.cs" />
+    <Compile Include="Contexto\DadosContexto.cs" />
+    <Compile Include="Migrations\201912022313434_CreatetablePessoa.cs" />
+    <Compile Include="Migrations\201912022313434_CreatetablePessoa.designer.cs">
+      <DependentUpon>201912022313434_CreatetablePessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912022346037_CreatetableProduto.cs" />
+    <Compile Include="Migrations\201912022346037_CreatetableProduto.designer.cs">
+      <DependentUpon>201912022346037_CreatetableProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Pessoa.cs" />
+    <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tipos\TipoReferencia\Cachorro.cs" />
-    <Compile Include="Tipos\TipoReferencia\Classes.cs" />
-    <Compile Include="Tipos\TipoReferencia\Delegados.cs" />
-    <Compile Include="Tipos\TipoReferencia\IAnimal.cs" />
-    <Compile Include="Tipos\TipoReferencia\ICachoro.cs" />
-    <Compile Include="Tipos\TipoReferencia\Passaro.cs" />
-    <Compile Include="Tipos\TipoReferencia\PastorAlemao.cs" />
-    <Compile Include="Tipos\TipoValor\Estruturas.cs" />
-    <Compile Include="Tipos\TipoValor\Flutuante.cs" />
-    <Compile Include="Tipos\TipoValor\Inteiros.cs" />
-    <Compile Include="Tipos\TipoValor\Outros.cs" />
+    <Compile Include="Repositorio\PessoaRepositorio.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Banco\DadosDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Banco\DadosDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DadosDb.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Cs483.Dados\Cs483.Dados.csproj">
-      <Project>{ab7f8039-5f87-44a8-9bf8-070c04ed4667}</Project>
-      <Name>Cs483.Dados</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Migrations\201912022313434_CreatetablePessoa.resx">
+      <DependentUpon>201912022313434_CreatetablePessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912022346037_CreatetableProduto.resx">
+      <DependentUpon>201912022346037_CreatetableProduto.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
