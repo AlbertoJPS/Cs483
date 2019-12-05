@@ -42,7 +42,7 @@ namespace Cs483.Dados.Repositorio
                 ClasseTipo tipoDb = BuscarPorId(tipo.Id);
                 if(tipoDb != null)
                 {
-                    tipoDb = tipo;
+                    contexto.Set<ClasseTipo>(tipoDb).State = ConsoleModifiers;
                     contexto.SaveChanges();
                 }
             }

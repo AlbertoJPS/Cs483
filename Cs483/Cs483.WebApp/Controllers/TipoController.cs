@@ -40,7 +40,7 @@ namespace Cs483.WebApp.Controllers
         {
             TipoRepositorio repositorio = new TipoRepositorio();
             repositorio.Editar(model);
-            ViewBag.Mensage = "Salvo com Sucesso!";
+            ViewBag.Mensage1 = "Salvo com Sucesso!";
             return View();
         }
 
