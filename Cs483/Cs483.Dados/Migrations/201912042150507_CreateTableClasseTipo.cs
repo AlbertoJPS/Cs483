@@ -3,20 +3,17 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CreatetableProduto : DbMigration
+    public partial class CreateTableClasseTipo : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Produtoes",
+                "dbo.ClasseTipoes",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Nome = c.String(),
-                        Descricao = c.String(),
-                        Marca = c.String(),
-                        Fabricante = c.String(),
-                        Valor = c.Int(nullable: false),
+                        descricao = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -24,7 +21,7 @@
         
         public override void Down()
         {
-            DropTable("dbo.Produtoes");
+            DropTable("dbo.ClasseTipoes");
         }
     }
 }

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base.cs" />
+    <Compile Include="ClasseTipo.cs" />
     <Compile Include="Contexto\DadosContexto.cs" />
     <Compile Include="Migrations\201912022313434_CreatetablePessoa.cs" />
     <Compile Include="Migrations\201912022313434_CreatetablePessoa.designer.cs">
@@ -76,11 +77,20 @@
     <Compile Include="Migrations\201912022346037_CreatetableProduto.designer.cs">
       <DependentUpon>201912022346037_CreatetableProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912042150507_CreateTableClasseTipo.cs" />
+    <Compile Include="Migrations\201912042150507_CreateTableClasseTipo.designer.cs">
+      <DependentUpon>201912042150507_CreateTableClasseTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912050017087_FkClasseTipo.cs" />
+    <Compile Include="Migrations\201912050017087_FkClasseTipo.designer.cs">
+      <DependentUpon>201912050017087_FkClasseTipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorio\PessoaRepositorio.cs" />
+    <Compile Include="Repositorio\TipoRepositorio.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Banco\DadosDb.mdf">
@@ -113,6 +123,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912022346037_CreatetableProduto.resx">
       <DependentUpon>201912022346037_CreatetableProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912042150507_CreateTableClasseTipo.resx">
+      <DependentUpon>201912042150507_CreateTableClasseTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912050017087_FkClasseTipo.resx">
+      <DependentUpon>201912050017087_FkClasseTipo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

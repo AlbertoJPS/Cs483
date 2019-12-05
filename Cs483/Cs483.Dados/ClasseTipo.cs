@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Cs483.Dados
 {
-    public class Produto : Base
+    public class ClasseTipo : Base
     {
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string Marca { get; set; }
-        public string Fabricante { get; set; }
-        public int Valor { get; set; }
-
-        public ClasseTipo Tipo { get; set; }
     }
 }
