@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs483.Dados", "Cs483.Dados\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs483.WebApp", "Cs483.WebApp\Cs483.WebApp.csproj", "{171CF1C7-C87A-4405-AD96-BD8195896DE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTeste", "ConsoleAppTeste\ConsoleAppTeste.csproj", "{5EA150B7-7224-4A8D-B1C8-2A6132C2ED25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{171CF1C7-C87A-4405-AD96-BD8195896DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{171CF1C7-C87A-4405-AD96-BD8195896DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{171CF1C7-C87A-4405-AD96-BD8195896DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA150B7-7224-4A8D-B1C8-2A6132C2ED25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA150B7-7224-4A8D-B1C8-2A6132C2ED25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA150B7-7224-4A8D-B1C8-2A6132C2ED25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA150B7-7224-4A8D-B1C8-2A6132C2ED25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
