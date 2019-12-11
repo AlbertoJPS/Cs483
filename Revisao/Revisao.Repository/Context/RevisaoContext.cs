@@ -14,7 +14,7 @@ namespace Revisao.Repository.Context
         public DbSet<PessoaFisica> PessoaFisica { get; set; }
         public DbSet<PessoaJuridica> PessoaJuridica { get; set; }
 
-        public RevisaoContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\67010\Source\Repos\Revisao\Revisao\Revisao.Repository\DataBase\DatabaseRevisao.mdf;Integrated Security=True")
+        public RevisaoContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=P:\Backup ProWay\C#\Cs483\Revisao\Revisao.Repository\DataBase\DatabaseRevisao.mdf;Integrated Security=True")
         {
 
         }
@@ -23,5 +23,7 @@ namespace Revisao.Repository.Context
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             base.OnModelCreating(modelBuilder);
         }
+
+        public System.Data.Entity.DbSet<Revisao.Domain.Entities.Pessoa> Pessoas { get; set; }
     }
 }

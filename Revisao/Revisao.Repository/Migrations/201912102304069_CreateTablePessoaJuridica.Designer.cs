@@ -13,7 +13,7 @@ namespace Revisao.Repository.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201912100027428_CreateTablePessoaJuridica"; }
+            get { return "201912102304069_CreateTablePessoaJuridica"; }
         }
         
         string IMigrationMetadata.Source

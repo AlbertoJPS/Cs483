@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h1>Modulo Pessoa Física</h1>
+    <div>
+        <h5>Lista de pessoas cadastradas</h5>
+        @{ 
+            Html.RenderAction("list");
+        }
+    </div>
+</div>
+

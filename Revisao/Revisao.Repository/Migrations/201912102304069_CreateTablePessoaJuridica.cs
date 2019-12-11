@@ -13,7 +13,7 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CNPJ = c.String(),
-                        NomeEmpresa = c.String(),
+                        NomeFantasia = c.String(),
                         Nome = c.String(),
                         SobreNome = c.String(),
                         Sexo = c.String(),

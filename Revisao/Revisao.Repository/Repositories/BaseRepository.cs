@@ -3,52 +3,58 @@ using Revisao.Domain.Interfaces;
 using Revisao.Repository.Context;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Revisao.Repository.Repositories
 {
-    public class BaseRepository : IRepository
+    public class BaseRepository<T> : IRepository2<T> where T : Base
     {
-        public void Insert(object obj)
+        public void Insert(T obj)
         {
             using (RevisaoContext context = new RevisaoContext())
             {
-                context.PessoaFisica.Add(obj as PessoaFisica);
+                context.Set<T>().Add(obj);
+                context.SaveChanges();
             }
         }
-        public void Update(object obj)
+        public void Update(T obj)
         {
             using (RevisaoContext context = new RevisaoContext())
             {
-                context.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+                context.Entry(obj).State = EntityState.Modified;
                 context.SaveChanges();
 
             }
         }
-        public void Delete()
+        public void Delete(int id)
         {
             using (RevisaoContext context = new RevisaoContext())
             {
-                context.
+                T obj = GetById(id);
+                context.Entry(obj).State = EntityState.Deleted;
+                context.SaveChanges();
             }
         }
-        public List<object> ListAll()
+        public List<T> ListAll()
         {
-            List<object> lista;
+            List<T> lista = new List<T>();
             using (RevisaoContext context = new RevisaoContext())
             {
-                lista = context.PessoaFisica.ToList() as List<object>;
+                lista = context.Set<T>().ToList();
             }
-            return List;
+            return lista;
         }
-        public object GetById(int Id)
+        public T GetById(int id)
         {
+            T obj;
             using (RevisaoContext context = new RevisaoContext())
             {
-                context.
+                obj = context.Set<T>().Find(id);
             }
+            return obj;
         }
     }
 }

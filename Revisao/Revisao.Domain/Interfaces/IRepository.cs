@@ -10,8 +10,8 @@ namespace Revisao.Domain.Interfaces
     {
         
         void Insert(object obj);
-        void Update();
-        void Delete();
+        void Update(object obj);
+        void Delete(int Id);
         List<object> ListAll();
         object GetById(int Id);
 

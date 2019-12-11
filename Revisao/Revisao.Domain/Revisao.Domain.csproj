@@ -46,6 +46,7 @@
     <Compile Include="Entities\PessoaFisica.cs" />
     <Compile Include="Entities\PessoaJuridica.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IRepository2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

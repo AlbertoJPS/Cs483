@@ -9,7 +9,7 @@ namespace Revisao.Domain.Entities
     public class PessoaJuridica : Pessoa
     {
         public string CNPJ { get; set; }
-        public string NomeEmpresa { get; set; }
+        public string NomeFantasia { get; set; }
     }
 }
 

@@ -71,13 +71,19 @@
     <Compile Include="Migrations\201912100019143_CreateTablePessoaFisica.designer.cs">
       <DependentUpon>201912100019143_CreateTablePessoaFisica.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201912100027428_CreateTablePessoaJuridica.cs" />
-    <Compile Include="Migrations\201912100027428_CreateTablePessoaJuridica.designer.cs">
-      <DependentUpon>201912100027428_CreateTablePessoaJuridica.cs</DependentUpon>
+    <Compile Include="Migrations\201912102304069_CreateTablePessoaJuridica.cs" />
+    <Compile Include="Migrations\201912102304069_CreateTablePessoaJuridica.designer.cs">
+      <DependentUpon>201912102304069_CreateTablePessoaJuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912110108507_CreateTable.cs" />
+    <Compile Include="Migrations\201912110108507_CreateTable.designer.cs">
+      <DependentUpon>201912110108507_CreateTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\PessoaFisicaRepository.cs" />
+    <Compile Include="Repositories\PessoaJuridicaRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -114,8 +120,11 @@
     <EmbeddedResource Include="Migrations\201912100019143_CreateTablePessoaFisica.resx">
       <DependentUpon>201912100019143_CreateTablePessoaFisica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201912100027428_CreateTablePessoaJuridica.resx">
-      <DependentUpon>201912100027428_CreateTablePessoaJuridica.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912102304069_CreateTablePessoaJuridica.resx">
+      <DependentUpon>201912102304069_CreateTablePessoaJuridica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912110108507_CreateTable.resx">
+      <DependentUpon>201912110108507_CreateTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
