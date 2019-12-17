@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Revisao.Domain.Entities
 {
+
     public class Base
     {
         public int Id { get; set; }

@@ -9,8 +9,8 @@ namespace Revisao.Domain.Entities
     public class Pessoa : Base
     {
         public string Nome { get; set; }
-        public string SobreNome { get; set; }
-        public string Sexo { get; set; }
-        public int Celular { get; set; }
+       // public string SobreNome { get; set; }
+       // public string Sexo { get; set; }
+       // public int Celular { get; set; }
     }
 }
